@@ -12,21 +12,20 @@ def selection_sort( arr ):
         temp_arr = arr[cur_index]
         arr[cur_index] = arr[smallest_index]
         arr[smallest_index] = temp_arr
-    return arr     
-
-
-
-        # TO-DO: swap
-
-
-
-
     return arr
 
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-
+    # set the outer loop, size of where numbers get bubbled
+    for i in range(len(arr)-1, 0, -1):
+        for x in range(0, i):
+            # check if the left is bigger than the right
+            if arr[x] > arr[x+1]:
+                # if yes, move it to the right
+                temp = arr[x]
+                arr[x] = arr[x+1]
+                arr[x+1] = temp
     return arr
 
 
